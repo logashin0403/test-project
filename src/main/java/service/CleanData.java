@@ -14,7 +14,7 @@ class CleanData {
     private static String regularClean(String str) {
 
         str = str.replaceAll("\\<.*?>", " ");
-        str = str.replaceAll("&nbsp;|&mdash;|&rsquo;|&laquo;|&raquo;", "");
+        str = str.replaceAll("&+[a-z]+;", "");
         str = str.replaceAll("[0-9]", "");
         str = str.replaceAll(" - ", "");
         str = str.replaceAll("[,:;.&!?)('\\]\\[]", "").trim();

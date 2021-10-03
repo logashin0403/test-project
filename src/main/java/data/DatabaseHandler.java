@@ -23,6 +23,7 @@ public class DatabaseHandler {
             properties.load(fileInputStream);
         } catch (FileNotFoundException e) {
             System.out.println("Не удалось найти файл конфигураций базы данных");
+            logger.error(e.getMessage());
             System.exit(-1);
         } catch (IOException e) {
             System.out.println("Произошла ошибка связанная с вводом или выводом данных");
